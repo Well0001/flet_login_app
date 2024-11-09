@@ -1,0 +1,5 @@
+venv/
+users.db
+*.log
+__pycache__/
+.idea/

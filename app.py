@@ -35,10 +35,16 @@ def main(page: ft.Page):
         if user:
             page.clean()
             page.add(
-                ft.Container(
-                    content=ft.Text("Bem-vindo à página inicial!", color="#000000", size=30),
-                    alignment=ft.alignment.center
-                )
+                ft.Stack([
+                    ft.Container(
+                        content=ft.Text(
+                            "Bem-vindo à página inicial!", 
+                            color="#FFFFFF" if page.theme_mode == ft.ThemeMode.DARK else "#000000", 
+                            size=30
+                        ),
+                        alignment=ft.alignment.center
+                    ),
+                ])
             )
             page.update()
         else:
